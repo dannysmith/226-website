@@ -1,0 +1,42 @@
+Keywords to include in copy
+---------------------------
+
+flying
+adventure
+brighton
+youth
+sport
+air training corps
+shooting
+gliding
+leadership
+RAF
+air
+cadet
+
+Colours
+-------
+Background Colour: #C2C8D2
+Text & Border Colour: #575555
+Copyright Notice Colour: #7A7A7A
+Dark Blue Header base colour: #395C98
+Link colour: #133063
+Link rollover: #E5AD47 or #956817
+Very light grey: #C2C8D2
+Bright Yellow: #FBDF37;
+Medium blue: #849DC3
+Pale Yellow: #FAEE98
+
+Sizes
+-----
+Arrow height - 11
+Arrow width - 20
+Header Width - 960
+Header Height - 163
+Join Box - 170 x 98
+Left Column width - 53
+
+Home-fc 396 x 508
+Home-jayne 587 x 411
+
+

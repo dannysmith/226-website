@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <title>Air Cadets in Brighton - Contact</title>
+
+    <!-- Meta Tags -->
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="author" content="Danny Smith (dasmith.co.uk)" />
+    <meta name="description" content="The brighton air cadets offer flying, adventure, sports, shooting and loads of other activities to young people between 13 and 20" />
+    <meta name="keywords" content="flying, shooting, brighton, youth, air, cadet, sport, adventure, gliding, leadership, RAF">
+
+    <!-- Styles and such-like -->
+    <link rel="stylesheet" href="styles.css" media="screen,projection" type="text/css" />    
+    <link rel="shortcut icon" href="favicon.png" />
+    
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+      google.load('jquery', '1.3.1');
+    </script>
+    <script type="text/javascript" src="application.js"></script>
+    <script type="text/javascript" src="jquery.ie6blocker.js"></script>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAA3u5SpqaF2DYRIsPQ7SUS7hTDvxThgNW7_jDu_nFfsu1u0TkZcRQHG2Y_Dmu1ykKka9cO0EH_xTYI-w" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        //Set up Maps
+        function initialize() {
+          if (GBrowserIsCompatible()) {
+            var map = new GMap2(document.getElementById("map_canvas"));
+            map.setCenter(new GLatLng(50.838115,-0.15089), 15);
+            map.setUIToDefault();
+            map.addOverlay(new GMarker(new GLatLng(50.837536,-0.153417))); //Drops marker on Squadron
+          }
+        }
+
+    </script>
+  </head>
+  <body id="contact" onload="initialize()" onunload="GUnload()">
+    <div id="header-wrap">
+      <div id="header">
+        <h1>Brighton Air Cadets</h1>
+        <h3>expand your horizons</h3>
+        <div id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li> |
+            <li><a href="http://blog.brightonaircadets.com">News</a></li> |
+            <li><a href="activities.html">Activities</a></li> |
+            <li><a href="http://www.facebook.com/pages/Brighton-Air-Cadets/212058427146?v=photos" target="_blank">Photos</a></li> |
+            <li><a href="join.html">Find out more</a></li> |
+            <li class="current-page">Contact</li> |
+          </ul>
+        </div>
+      </div><!-- Header -->
+    </div><!-- Header-wrap -->
+    <div id="wrapper">
+
+      <div id="sidebar">
+        
+        <div class="box">
+          <h4>Get in touch...</h4>
+          <p>&larr;</p>
+        </div>
+        
+        <div class="box">
+          <h4>When do we meet?</h4>
+          <p><strong>Monday</strong> 19:00 - 21:30</p>
+          <p><strong>Wednesday</strong> 19:00 - 21:30</p>
+          <p><strong>Weekends</strong> Many activities like flying and adventure training take place on weekends</p>
+        </div>
+        
+        <div class="box">
+          <h4>Talk to us</h4>
+          <p id="facebook"><a href="http://www.facebook.com/pages/Brighton-Air-Cadets/212058427146" target="_blank"><img src="images/facebook.jpg" alt="See our facebook pages" /></a></p>
+          <p id="twitter"><a href="http://twitter.com/brightoncadets" target="_blank"><img src="images/twitter.png" alt="Follow us on twitter" /></a></p>
+        </div>
+        
+        <div class="box hide">
+            <h4>Latest...</h4>
+            <p>Twitter or tumblr Widget will go Here</p>
+        </div>
+        
+        <div class="box" id="copyright">
+          <p>&copy; Copyright 2009 226 (Brighton) Sqn, ATC. All Rights Reserved.</p>
+          <p>Design by <a href="http://dasmith.co.uk">Danny Smith</a></p>
+        </div>
+        
+      </div><!-- Sidebar -->
+      
+      
+      <div id="content">
+        <div id="contact-details">
+          <h2>Contact details</h2>
+          <p>The best way to get in touch with us is by email, or via the contact form on the right. If you want to come and visit on a parade night, there's a map below.</p>
+          <address>
+             226 (Brighton) Sqn, ATC<br />
+             TA Centre<br />
+             Dyke Road<br />
+             BRIGHTON<br />
+             BN1 5AS<br />
+          </address>
+          <ul>
+            <li class="phone">01273 566226 <br /><span>(Manned 7-9pm Mon &amp; Weds - answering machine at other times)</span></li>
+            <li class="email"><a href="mailto:adj.226@aircadets.org">adj.226@aircadets.org</a> - Routine matters (Adjutant)</li>
+            <li class="email"><a href="mailto:oc.226@aircadets.org">oc.226@aircadets.org</a> - Officer Commanding</li>
+            <li class="email"><a href="mailto:226@aircadets.org">226@aircadets.org</a> - Training Officer &amp; other staff</li>
+          </ul>
+        </div><!-- Contact-details -->
+        <div id="contact-form">
+          <h3>Say hello to us</h3>
+          <form action="send_message.php" method="post" accept-charset="utf-8">
+            <label for="name">Name</label><input type="text" name="name" value="" id="name">
+            <span id="val_name"><img src="images/blank.png" /></span>
+            <p class="note">(please enter first and last names)</p>
+
+            <label for="email">Email</label><input type="text" name="email" value="" id="email">
+            <span id="val_email"><img src="images/blank.png" /></span>
+            <p class="note"></p>
+
+            <label for="dob">Birthday</label><input type="text" name="dob" value="" id="dob">
+            <span id="val_dob"><img src="images/blank.png" /></span>
+            <p class="note">(in the form DD/MM/YYYY)</p>
+            
+
+            <label for="phone">Phone</label><input type="text" name="phone" value="" id="phone">
+            <span id="val_phone"><img src="images/blank.png" /></span>
+            <p class="note">(optional)</p>
+            
+            <label for="message">Message</label><textarea name="message" id="message"></textarea>
+            
+            <p><input class="submit" type="submit" value="Send &rarr;"></p>
+          </form>
+        </div><!-- Contact-form -->
+        
+        <div id="map_canvas"></div>
+          
+      </div><!-- Content -->
+      
+    </div><!-- Wrapper -->
+  </body>
+</html>

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- 
+If you're toying with suing parts of this theme, please give credit where it's due (Danny Smith - dasmith.co.uk)
+Parts of this theme are based on Redux by jacob and Letterhead by cubicle17
+-->
+
+  <head>
+    <title>Brighton Air Cadets News{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
+
+    <!-- Meta Tags -->
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="author" content="Danny Smith (dasmith.co.uk)" />
+    <meta name="description" content="The brighton air cadets offer flying, adventure, sports, shooting and loads of other activities to young people between 13 and 20" />
+    <meta name="keywords" content="flying, shooting, brighton, youth, air, cadet, sport, adventure, gliding, leadership, RAF">
+
+    <!-- Styles and such-like -->
+    <link rel="stylesheet" href="http://brightonaircadets.com/styles.css" media="screen,projection" type="text/css" />
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+      google.load('jquery', '1.3.1');
+    </script>
+    <script type="text/javascript" src="http://brightonaircadets.com/application.js"></script>
+    <script type="text/javascript" src="http://brightonaircadets.com/jquery.ie6blocker.js"></script> 
+    
+    <style>
+      {CustomCSS}
+    </style>
+    
+  </head>
+  <body id="news">
+    <div id="header-wrap">
+      <div id="header">
+        <h1>Brighton Air Cadets</h1>
+        <h3>expand your horizons</h3>
+        <div id="nav">
+          <ul>
+            <li><a href="http://brightonaircadets.com">Home</a></li> |
+            <li class="current-page"><a href="http://blog.brightonaircadets.com/">News</a></li> |
+            <li><a href="http://brightonaircadets.com/activities.html">Activities</a></li> |
+            <li><a href="http://www.facebook.com/pages/Brighton-Air-Cadets/212058427146?v=photos" target="_blank">Photos</a></li> |
+            <li><a href="http://brightonaircadets.com/join.html">Find out more</a></li> |
+            <li><a href="http://brightonaircadets.com/contact.html">Contact</a></li> |
+          </ul>
+        </div>
+      </div><!-- Header -->
+    </div><!-- Header-wrap -->
+    <div id="wrapper">
+
+      <div id="sidebar">
+        
+        <div class="box">
+          <a href="http://brightonaircadets.com/join.html">
+            <h4>Find out More...</h4>
+            <p>Join!</p>
+          </a>
+        </div>
+        
+        <div class="box" id="search">
+          <form action="/search" method="get" id="search-form">
+            <input type="hidden" name="t" value="brightonaircadets" />
+            <input type="hidden" name="scope" value="all_of_tumblr" />
+            <input type="text" name="q" class="query" value="{SearchQuery}" />
+            <input type="submit" value="Search" class="submit" />
+            <div class="clear"></div>
+          </form>
+          <div id="search-scope">
+            <input type="radio" id="search-scope-me" name="scope" checked="checked" onclick="document.getElementById('search-form').action='/search'" />
+            <label for="search-scope-me" onclick="document.getElementById('search-form').action='/search'">This Blog</label>
+            <input type="radio" id="search-scope-all" name="scope" onclick="document.getElementById('search-form').action='http://tumblr.com/search'" />
+            <label for="search-scope-all" onclick="document.getElementById('search-form').action='http://tumblr.com/search'">All of Tumblr</label>
+          </div>
+        </div>
+        
+        <div class="box" id="tumblr-links">
+          <p class="follow"><a href="http://www.tumblr.com/follow/brightonaircadets" id="followontumblr">Follow on Tumblr</a></p>
+          <p class="rss"><a href="{RSS}">RSS Feed</a></p>
+          <p class="archive"><a href="/archive">Archive</a></p>
+        </div>
+        
+        <div class="box">
+          <h4>When do we meet?</h4>
+          <p><strong>Monday</strong> 19:00 - 21:30</p>
+          <p><strong>Wednesday</strong> 19:00 - 21:30</p>
+          <p><strong>Weekends</strong> Many activities like flying and adventure training take place on weekends</p>
+        </div>
+        
+        <div class="box">
+          <h4>Talk to us</h4>
+          <p id="facebook"><a href="http://www.facebook.com/pages/Brighton-Air-Cadets/212058427146/212058427146" target="_blank"><img src="http://brightonaircadets.com/images/facebook.jpg" alt="See our facebook pages" /></a></p>
+          <p id="twitter"><a href="http://twitter.com/brightoncadets" target="_blank"><img src="http://brightonaircadets.com/images/twitter.png" alt="Follow us on twitter" /></a></p>
+        </div>
+        
+        <div class="box hide">
+            <h4>Latest...</h4>
+            <p>Twitter or tumblr Widget will go Here</p>
+        </div>
+        
+        <div class="box" id="copyright">
+          <p>&copy; Copyright 2009 226 (Brighton) Sqn, ATC. All Rights Reserved. <a href="http://www.tumblr.com">Powered by Tumblr</a></p>
+          <p>Design by <a href="http://dasmith.co.uk">Danny Smith</a></p>
+        </div>
+        
+      </div><!-- Sidebar -->
+      
+      
+      <div id="content">
+        
+        <!-- BEGIN BLOG CONTENT -->
+        
+        {block:TagPage}
+          <h3 class="search-title">Articles tagged "{Tag}"</h3>
+        {/block:TagPage}
+        
+        {block:SearchPage}
+          <h3 class="search-title">{block:NoSearchResults}Sorry, {/block:NoSearchResults}{SearchResultCount} results for "{SearchQuery}"</h3>
+          {block:NoSearchResults}
+            <p>Try another search term</p>
+          {/block:NoSearchResults}
+        {/block:SearchPage}
+
+        
+        {block:Posts}
+        
+        
+        {block:Audio}
+        <div class="post">
+          {block:NewDayDate}
+          <div class="side-date">
+            {ShortMonth}<br /><span class="day">{DayOfMonth}</span>
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:NewDayDate}
+          
+          {block:SameDayDate}
+          <div class="side-date">
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:SameDayDate}
+          
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          
+          <div class="audio">
+            {AudioPlayerWhite}
+            <div class="meta">
+              played {FormattedPlayCount} times
+            </div>
+          </div>
+          
+          <div class="footer clearleft">
+            &uarr; Posted {TimeAgo}
+            {block:HasTags}
+              | Tags: 
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+            {/block:HasTags}
+          </div>
+        </div>
+        {/block:Audio}
+        
+        
+        
+        
+        
+        
+        
+        {block:Chat}
+        <div class="post">
+          {block:NewDayDate}
+          <div class="side-date">
+            {ShortMonth}<br /><span class="day">{DayOfMonth}</span>
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:NewDayDate}
+          
+          {block:SameDayDate}
+          <div class="side-date">
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:SameDayDate}
+          
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          
+          <div class="chat">
+            <div class="lines">
+              {block:Lines}
+                <div class="line {Alt}">
+                  {block:Label}
+                    <strong>{Label}</strong>
+                  {/block:Label}
+                  {Line}
+                </div>
+              {/block:Lines}
+            </div>
+          </div>
+          
+          <div style="height: 10px"></div>
+          
+          <div class="footer">
+            &uarr; Posted {TimeAgo}
+            {block:HasTags}
+              | Tags: 
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+            {/block:HasTags}
+          </div>
+        </div>
+        {/block:Chat}
+        
+        
+        
+        
+        
+        
+        
+        
+        {block:Link}
+        <div class="post">
+          
+          {block:NewDayDate}
+          <div class="side-date">
+            {ShortMonth}<br /><span class="day">{DayOfMonth}</span>
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:NewDayDate}
+          
+          {block:SameDayDate}
+          <div class="side-date">
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:SameDayDate}
+          
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          
+          <div class="link">
+            <a href="{URL}">{Name} »</a>
+          </div>
+          {block:Description}
+            <div class="copy">
+              {Description}
+            </div>
+          {/block:Description}
+          
+          <div class="footer">
+            &uarr; Posted {TimeAgo}
+            {block:HasTags}
+              | Tags: 
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+            {/block:HasTags}
+          </div>
+        </div>
+        {/block:Link}
+        
+        
+        
+        
+        {block:Quote}
+        <div class="post">
+          
+          {block:NewDayDate}
+          <div class="side-date">
+            {ShortMonth}<br /><span class="day">{DayOfMonth}</span>
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:NewDayDate}
+          
+          {block:SameDayDate}
+          <div class="side-date">
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:SameDayDate}
+          
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          
+          <div class="quote {Length}">
+            {Quote}
+          </div>
+          <div class="copy">
+            <div class="quotebg">
+              “
+            </div>
+            <div class="quote-source">
+              {block:Source}
+                — {Source}
+              {/block:Source}
+            </div>
+          </div>
+          
+          <div class="footer">
+            &uarr; Posted {TimeAgo}
+            {block:HasTags}
+              | Tags: 
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+            {/block:HasTags}
+          </div>
+        </div>
+        {/block:Quote}
+        
+        
+        
+        
+        
+        {block:Photo}
+        <div class="post">
+          
+          {block:NewDayDate}
+          <div class="side-date">
+            {ShortMonth}<br /><span class="day">{DayOfMonth}</span>
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:NewDayDate}
+          
+          {block:SameDayDate}
+          <div class="side-date">
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:SameDayDate}
+          
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          
+          <div class="media">
+            {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+          </div>
+          
+          {block:Caption}
+            <div class="copy">
+              <p>
+                {Caption}
+              </p>
+            </div>
+          {/block:Caption}
+          
+          <div class="footer">
+            &uarr; Posted {TimeAgo}
+            {block:HasTags}
+              | Tags: 
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+            {/block:HasTags}
+          </div>
+        </div>
+        {/block:Photo}
+        
+        
+        
+        
+        
+        
+        
+        {block:Text}
+        <div class="post">
+          {block:NewDayDate}
+          <div class="side-date">
+            {ShortMonth}<br /><span class="day">{DayOfMonth}</span>
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:NewDayDate}
+          
+          {block:SameDayDate}
+          <div class="side-date">
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:SameDayDate}
+          
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          
+          <div class="copy">
+            {Body}
+            
+            {block:More}
+              <p class="read_more_container">
+                <a href="{Permalink}" class="read_more">Read More</a>
+              </p>
+            {/block:More}
+            
+          </div>
+          <div class="footer">
+            &uarr; Posted {TimeAgo}
+            {block:HasTags}
+              | Tags: 
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+            {/block:HasTags}
+          </div>
+        </div>
+        {/block:Text}
+        
+        
+        
+        
+        
+        
+        {block:Photoset}
+        <div class="post">
+          
+          {block:NewDayDate}
+          <div class="side-date">
+            {ShortMonth}<br /><span class="day">{DayOfMonth}</span>
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:NewDayDate}
+          
+          {block:SameDayDate}
+          <div class="side-date">
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:SameDayDate}
+          
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          
+          <div class="media">
+            {Photoset-500}
+          </div>
+          
+          {block:Caption}
+            <div class="copy">
+              <p>
+                {Caption}
+              </p>
+            </div>
+          {/block:Caption}
+          
+          <div class="footer">
+            &uarr; Posted {TimeAgo}
+            {block:HasTags}
+              | Tags: 
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+            {/block:HasTags}
+          </div>
+        </div>
+        {/block:Photoset}
+        
+        
+        
+        
+        
+        {block:Video}
+        <div class="post">
+          
+          {block:NewDayDate}
+          <div class="side-date">
+            {ShortMonth}<br /><span class="day">{DayOfMonth}</span>
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:NewDayDate}
+          
+          {block:SameDayDate}
+          <div class="side-date">
+            <a href="{Permalink}">&rarr;</a>
+          </div>
+          {/block:SameDayDate}
+          
+          {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+          {/block:Title}
+          
+          <div class="media">
+            {Video-500}
+          </div>
+          
+          {block:Caption}
+            <div class="copy">
+              <p>
+                {Caption}
+              </p>
+            </div>
+          {/block:Caption}
+          
+          <div class="footer">
+            &uarr; Posted {TimeAgo}
+            {block:HasTags}
+              | Tags: 
+                {block:Tags}
+                  <a href="{TagURL}">{Tag}</a>
+                {/block:Tags}
+            {/block:HasTags}
+          </div>
+        </div>
+        {/block:Video}
+        
+
+          <!-- Only displayed on permalink pages -->
+          {PostNotes}
+          
+        {/block:Posts}
+        
+        <!-- Pagination -->
+        {block:Pagination}
+          <div id="pagination">
+            {block:PreviousPage}
+              <a href="{PreviousPage}">previous page</a>
+            {/block:PreviousPage}
+             | 
+            {block:NextPage}
+              <a href="{NextPage}">next page</a>
+            {/block:NextPage}
+          </div>
+        {/block:Pagination}
+      </div><!-- Content -->
+      
+    </div><!-- Wrapper -->
+    <p>
+      <iframe src="http://www.tumblr.com/dashboard/iframe?src=http%3A%2F%2Fdevdas.tumblr.com%2F" border="0" scrolling="no" width="324" height="25" allowtransparency="true" frameborder="0" style="position:absolute; z-index:1337; top:0px; right:0px; border:0px; background-color:transparent; overflow:hidden;" id="tumblr_controls"></iframe>
+    </p>
+    
+    <!-- TUMBLR CODE -->
+    <script type="text/javascript">
+//<![CDATA[
+    _qoptions={qacct:"p-19UtqE8ngoZbM"};
+    //]]>
+    </script><script type="text/javascript" src="http://edge.quantserve.com/quant.js">
+</script><noscript><img src="http://pixel.quantserve.com/pixel/p-19UtqE8ngoZbM.gif" style="display:none; border-width:0px; height:1px; width:1px;" /></noscript><!-- END TUMBLR CODE -->
+  </body>
+</html>
